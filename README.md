@@ -23,6 +23,8 @@ It also analyzes saved runs and selected Codex session logs **entirely offline**
 
 ## Analyze existing usage without running an agent
 
+For a step-by-step example, see [Measure the cost of one Codex task](docs/measure-codex-task.md). It explains how to separate tasks in the same terminal, find a saved conversation log, and generate a report.
+
 ```sh
 # All saved lab runs, deduplicated; group by model, task, and UTC start day.
 ./agent-cost-lab summary artifacts --out artifacts/offline-summary/report.md
