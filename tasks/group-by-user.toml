@@ -1,0 +1,13 @@
+id = "group-by-user"
+title = "Summarize timeledger sessions by user"
+fixture = "fixtures/timeledger"
+allowed_source = "timeledger/ledger.py"
+verifier = "verification/grouping_cases.py"
+requirements = """
+Add summarize(rows, group_by="user") to return elapsed seconds grouped by UTC
+day and user. User-grouped result objects use day, user, and seconds. Keep
+summarize(rows) and summarize(rows, group_by="project") project-grouped by
+default with the existing shape and values. Sort by day and group key for
+deterministic output. An empty input returns an empty list. Count overlapping
+entries independently. Edit only timeledger/ledger.py.
+"""

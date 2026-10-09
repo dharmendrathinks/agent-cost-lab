@@ -1,0 +1,16 @@
+include LICENSE README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md PLAN.md SESSION_STATE.md
+include agent-cost-lab .gitignore .python-version uv.toml
+recursive-include docs *.md
+recursive-include configs *.toml *.txt
+recursive-include tasks *.toml
+recursive-include fixtures *.py *.csv *.md
+recursive-include verification *.py
+recursive-include tests *.py *.jsonl *.md
+recursive-include scripts *.py
+prune artifacts
+prune raw-events
+prune .venv
+prune .cache
+prune .uv-cache
+prune .pytest_cache
+global-exclude *.local.toml *.py[cod] .DS_Store .env .env.*

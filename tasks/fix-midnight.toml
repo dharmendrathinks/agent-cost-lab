@@ -1,0 +1,13 @@
+id = "fix-midnight"
+title = "Allocate work sessions across UTC midnight"
+fixture = "fixtures/timeledger"
+allowed_source = "timeledger/ledger.py"
+verifier = "verification/midnight_cases.py"
+requirements = """
+Allocate each session's elapsed seconds to the UTC calendar days it actually overlaps.
+Timestamps may include timezone offsets; convert to UTC before finding day boundaries.
+Intervals are half-open [start, end), so an exact-midnight end adds nothing to the next day.
+Allocate overlapping entries independently and add their seconds; do not merge intervals.
+For each entry, preserve its total elapsed seconds. Existing same-day project summaries
+and deterministic day/project ordering must remain unchanged. Edit only timeledger/ledger.py.
+"""

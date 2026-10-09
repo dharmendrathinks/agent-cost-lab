@@ -1,0 +1,12 @@
+# Public defaults: validate on your own installation before enabling live optimization.
+# Copy to headroom-compatibility.local.toml (ignored) and record reviewed evidence there.
+# Historical evidence and limits: docs/live-validation.md. Not a version range.
+codex_version = "0.160.0"
+headroom_version = "0.39.1"
+subscription_routing_validated = false
+compression_status_validated = false
+retrieval_validated = false
+events_and_usage_validated = false
+cleanup_validated = false
+effective_settings_validated = false
+effective_settings = ""

@@ -1,0 +1,13 @@
+id = "add-validation"
+title = "Validate timeledger entries with row-specific errors"
+fixture = "fixtures/timeledger"
+allowed_source = "timeledger/ledger.py"
+verifier = "verification/validation_cases.py"
+requirements = """
+Validate entries before allocation while preserving valid-input project summaries.
+Reject missing or blank entry_id, user, or project; malformed or timezone-naive
+ISO 8601 timestamps; non-positive intervals; and duplicate entry_id values.
+Raise ValueError naming the first faulty CSV row, numbering the header as row 1
+and the first data entry as row 2. Evaluate rows in input order. Valid timezone
+offsets are accepted. Edit only timeledger/ledger.py.
+"""

@@ -1,0 +1,2 @@
+# Explicit, project-local installation only after version/options review.
+headroom-ai[proxy,mcp]==0.39.1

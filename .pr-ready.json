@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "checks": {
+    "build": ["uv", "build", "--offline", "--out-dir", "artifacts/release-build"],
+    "test": [".venv/bin/python", "-m", "pytest", "-q"],
+    "static": [".venv/bin/python", "scripts/check_dist.py", "artifacts/release-build"]
+  }
+}

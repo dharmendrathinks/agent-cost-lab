@@ -1,0 +1,53 @@
+# Optional OFFLINE API-equivalent scenarios, never actual subscription billing.
+# Retrieved from the official source on 2026-10-05. Exact IDs only; no aliases.
+# USD / 1,000,000 tokens, standard service. Short <=272K input per request.
+# Select --context long to assume >272K per request. Thread totals cannot select it.
+schema_version = 1
+currency = "USD"
+service_tier = "standard"
+as_of = "2026-10-05"
+source = "https://developers.openai.com/api/docs/pricing"
+
+[models."gpt-6-sol".short]
+input = "2.00"
+cached_input = "0.20"
+cache_write_input = "2.50"
+output = "10.00"
+[models."gpt-6-sol".long]
+input = "4.00"
+cached_input = "0.40"
+cache_write_input = "5.00"
+output = "15.00"
+
+[models."gpt-6.1-sol".short]
+input = "2.00"
+cached_input = "0.10"
+cache_write_input = "2.50"
+output = "10.00"
+[models."gpt-6.1-sol".long]
+input = "4.00"
+cached_input = "0.20"
+cache_write_input = "5.00"
+output = "15.00"
+
+[models."gpt-6-astra".short]
+input = "10.00"
+cached_input = "1.00"
+cache_write_input = "12.50"
+output = "50.00"
+[models."gpt-6-astra".long]
+input = "20.00"
+cached_input = "2.00"
+cache_write_input = "25.00"
+output = "75.00"
+
+[models."gpt-6-luna".short]
+input = "0.10"
+cached_input = "0.01"
+cache_write_input = "0.125"
+output = "0.50"
+[models."gpt-6-luna".long]
+input = "0.20"
+cached_input = "0.02"
+cache_write_input = "0.25"
+output = "0.75"

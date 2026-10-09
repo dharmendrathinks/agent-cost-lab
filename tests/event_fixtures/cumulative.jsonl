@@ -1,0 +1,6 @@
+{"type":"thread.started","thread_id":"synthetic-thread"}
+{"type":"turn.started"}
+{"type":"turn.completed","usage":{"input_tokens":100,"cached_input_tokens":20,"output_tokens":25,"reasoning_output_tokens":5}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"type":"command_execution","id":"synthetic-command"}}
+{"type":"turn.completed","usage":{"input_tokens":150,"cached_input_tokens":30,"output_tokens":40,"reasoning_output_tokens":9}}

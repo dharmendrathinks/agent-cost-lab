@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -x "$project_dir/.venv/bin/python" ]; then
+    python_executable="$project_dir/.venv/bin/python"
+elif command -v python3.12 >/dev/null 2>&1; then
+    python_executable=$(command -v python3.12)
+else
+    printf '%s\n' 'Agent Cost Lab requires Python 3.12. Create a project-local environment with uv.' >&2
+    exit 2
+fi
+
+PYTHONPATH="$project_dir/src${PYTHONPATH:+:$PYTHONPATH}" exec "$python_executable" -m agent_cost_lab.cli "$@"

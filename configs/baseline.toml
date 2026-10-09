@@ -1,0 +1,7 @@
+task = "tasks/fix-midnight.toml"
+reasoning = "medium"
+max_runs = 1
+timeout = 600
+verifier_timeout = 60
+max_total_seconds = 900
+# Add an explicitly available subscription model before a live run.
